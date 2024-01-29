@@ -1,4 +1,8 @@
+from datetime import datetime
+
 class Pessoa:
+    ano_atual = int(datetime.strftime(datetime.now(), '%Y'))
+
     def __init__(self, nome, idade, comendo=False, falando=False):
         self.nome = nome
         self.idade = idade
@@ -27,8 +31,12 @@ class Pessoa:
 
     def comer(self, alimento):
         if self.comendo:
-             print(f'{self.nome} já está comendo.')
-             return
+            print(f'{self.nome} já está comendo.')
+            return
+        
+        if self.falando:
+            print(f'{self.nome} não pode comer falando.')
+            return
         
         print(f'{self.nome} está comendo {alimento}.')
         self.comendo = True
@@ -40,3 +48,6 @@ class Pessoa:
         
         print(f'{self.nome} parou de comer.')
         self.comendo = False
+
+    def get_ano_nascimento(self):
+        pass
