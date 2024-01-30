@@ -9,10 +9,10 @@ from produto import Produto
 # print(Pessoa.gera_id())
 # print(p1.gera_id())
 
-p1 = Produto('Camiseta', 50)
+p1 = Produto('CAMISETA', 50)
 p1.desconto(10)
-print(p1.preco)
+print(p1.nome, p1.preco)
 
-p2 = Produto('Caneca', 'R$15')
+p2 = Produto('CANECA', 'R$15')
 p2.desconto(10)
-print(p2.preco)
+print(p2.nome, p2.preco)
